@@ -101,3 +101,5 @@ lint/tmp/
 .cxx
 local.properties
 
+.idea/vcs.xml
+
