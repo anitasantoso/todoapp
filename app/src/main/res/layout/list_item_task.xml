@@ -1,0 +1,33 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+<data>
+
+    <variable
+        name="checkboxClickListener"
+        type="android.view.View.OnClickListener" />
+
+    <variable
+        name="task"
+        type="com.example.mytodoapp.model.Task" />
+</data>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/taskCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:onClick="@{checkboxClickListener}" />
+
+    <TextView
+        android:id="@+id/taskTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@{task.desc}" />
+</LinearLayout>
+</layout>
